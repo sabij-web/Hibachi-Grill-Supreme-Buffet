@@ -1,0 +1,123 @@
+.menu-section {
+    padding: 6rem 5%;
+    background: linear-gradient(135deg, rgba(232, 216, 202, 0.2) 0%, rgba(86, 28, 36, 0.05) 100%);
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.menu-container h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    justify-items: center;
+}
+
+.menu-item {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-details {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.menu-details h3 {
+    font-size: 1.5rem;
+    color: #561C24;
+    margin-bottom: 0.5rem;
+}
+
+.menu-details .price {
+    font-size: 1.8rem;
+    color: #c34848;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.menu-details .time {
+    color: #666;
+    font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    .menu-item {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-section {
+        padding: 4rem 3%;
+    }
+
+    .menu-container h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .menu-item {
+        max-width: 100%;
+    }
+    
+    .menu-details {
+        padding: 1.2rem;
+    }
+    
+    .menu-details h3 {
+        font-size: 1.3rem;
+    }
+    
+    .menu-details .price {
+        font-size: 1.5rem;
+    }
+
+    .menu-details .time {
+        font-size: 0.9rem;
+    }
+}
